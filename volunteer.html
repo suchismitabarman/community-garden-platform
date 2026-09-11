@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Volunteer — Serpentine Lane Community Garden</title>
+<meta name="description" content="Help at Serpentine Lane Community Garden without committing to a plot — compost, tools, watering, and events." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="/">Serpentine&nbsp;Lane</a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/plots">Plots</a>
+      <a href="/events">Events</a>
+      <a href="/volunteer" class="active" aria-current="page">Volunteer</a>
+      <a href="/join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="volunteer-section">
+    <div class="wrap volunteer-grid">
+      <div class="volunteer-copy">
+        <h2>Help without a plot</h2>
+        <p>
+          Not ready to commit to a bed? The garden still needs hands for compost turning,
+          tool repair, and watering rounds when someone's away. Tell us what you're
+          drawn to and we'll loop you in.
+        </p>
+        <p class="page-crosslink">
+          Prefer to just watch for openings? <a href="/join">Get an email instead</a>.
+        </p>
+      </div>
+      <form id="volunteer-form" class="card-form" novalidate>
+        <label for="vol-name">Name</label>
+        <input id="vol-name" name="name" type="text" autocomplete="name" required />
+
+        <label for="vol-email">Email</label>
+        <input id="vol-email" name="email" type="email" autocomplete="email" required />
+
+        <fieldset class="interest-fieldset">
+          <legend>What sounds good?</legend>
+          <label class="check-row"><input type="checkbox" name="interests" value="Compost" /> Compost turning</label>
+          <label class="check-row"><input type="checkbox" name="interests" value="Tools" /> Tool repair</label>
+          <label class="check-row"><input type="checkbox" name="interests" value="Watering" /> Watering rounds</label>
+          <label class="check-row"><input type="checkbox" name="interests" value="Events" /> Running events</label>
+        </fieldset>
+
+        <label for="vol-message">Anything else <span class="optional">(optional)</span></label>
+        <textarea id="vol-message" name="message" rows="2"></textarea>
+
+        <button type="submit" class="btn btn-primary">Send it over</button>
+        <p class="form-note" id="volunteer-note" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <p>Serpentine Lane Community Garden — grown, not built, by the people who tend it.</p>
+      <p class="footer-sub">Open dawn to dusk. Gate code posted on the shed.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/plots">Plots</a>
+      <a href="/events">Events</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/join">Join</a>
+    </nav>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>

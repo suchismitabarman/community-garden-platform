@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Events — Serpentine Lane Community Garden</title>
+<meta name="description" content="Workdays, a seed swap, and upcoming events at Serpentine Lane Community Garden." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="/">Serpentine&nbsp;Lane</a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/plots">Plots</a>
+      <a href="/events" class="active" aria-current="page">Events</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="events-section wrap">
+    <div class="section-head">
+      <h2>On the calendar</h2>
+      <p>Workdays, swaps, and the odd slow morning with the kids.</p>
+    </div>
+    <div id="events-list" class="events-list">
+      <p class="loading-note">Loading events…</p>
+    </div>
+
+    <p class="page-crosslink">
+      Don't have a bed yet? Find one on the <a href="/plots">plot map</a> —
+      or <a href="/volunteer">help out</a> without one.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <p>Serpentine Lane Community Garden — grown, not built, by the people who tend it.</p>
+      <p class="footer-sub">Open dawn to dusk. Gate code posted on the shed.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/plots">Plots</a>
+      <a href="/events">Events</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/join">Join</a>
+    </nav>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>

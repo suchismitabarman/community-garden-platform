@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Join — Serpentine Lane Community Garden</title>
+<meta name="description" content="Get an email when a plot frees up or a workday gets posted at Serpentine Lane Community Garden." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="/">Serpentine&nbsp;Lane</a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/plots">Plots</a>
+      <a href="/events">Events</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/join" class="active" aria-current="page">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="join-section wrap">
+    <h2>Hear about new openings</h2>
+    <p>One email when a plot frees up or a workday gets posted. Nothing else.</p>
+    <form id="subscribe-form" class="subscribe-form" novalidate>
+      <input id="sub-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <p class="form-note" id="subscribe-note" role="status"></p>
+
+    <p class="page-crosslink">
+      Want to look now instead of waiting? Check the <a href="/plots">plot map</a>
+      or the <a href="/events">events board</a>.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <p>Serpentine Lane Community Garden — grown, not built, by the people who tend it.</p>
+      <p class="footer-sub">Open dawn to dusk. Gate code posted on the shed.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/plots">Plots</a>
+      <a href="/events">Events</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/join">Join</a>
+    </nav>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plot map — Serpentine Lane Community Garden</title>
+<meta name="description" content="See all 24 beds at Serpentine Lane, check sizes and prices, and reserve an open plot." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="/">Serpentine&nbsp;Lane</a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/plots" class="active" aria-current="page">Plots</a>
+      <a href="/events">Events</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="map-section wrap">
+    <div class="section-head">
+      <h2>The plot map</h2>
+      <p>Tap an open bed to reserve it. Rows run north to south, plots are numbered 01 through 24.</p>
+    </div>
+
+    <div class="map-legend">
+      <span class="legend-item"><i class="swatch swatch-available"></i>Available</span>
+      <span class="legend-item"><i class="swatch swatch-reserved"></i>Claimed</span>
+      <span class="legend-item"><i class="swatch swatch-selected"></i>Selected</span>
+    </div>
+
+    <div id="plot-map" class="plot-map" aria-live="polite">
+      <p class="loading-note">Loading the map…</p>
+    </div>
+
+    <div id="plot-detail" class="plot-detail" hidden>
+      <button type="button" class="detail-close" id="detail-close" aria-label="Close">×</button>
+      <div class="detail-body">
+        <p class="detail-code" id="detail-code">Plot 00</p>
+        <h3 id="detail-size">Medium bed</h3>
+        <ul class="detail-facts" id="detail-facts"></ul>
+
+        <div id="detail-available-panel">
+          <form id="reserve-form" class="inline-form" novalidate>
+            <label for="res-name">Name</label>
+            <input id="res-name" name="name" type="text" autocomplete="name" required />
+            <label for="res-email">Email</label>
+            <input id="res-email" name="email" type="email" autocomplete="email" required />
+            <label for="res-note">Anything we should know? <span class="optional">(optional)</span></label>
+            <textarea id="res-note" name="note" rows="2"></textarea>
+            <button type="submit" class="btn btn-primary">Reserve this plot</button>
+            <p class="form-note" id="reserve-note" role="status"></p>
+          </form>
+        </div>
+
+        <div id="detail-reserved-panel" hidden>
+          <p class="reserved-line">Claimed by <span id="detail-reserved-by">—</span>.</p>
+          <p class="reserved-sub">Looking for a bed? There are more open ones on the map.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="page-crosslink">
+      Once you've got a bed, the <a href="/events">events board</a> has the next workday.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <p>Serpentine Lane Community Garden — grown, not built, by the people who tend it.</p>
+      <p class="footer-sub">Open dawn to dusk. Gate code posted on the shed.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/plots">Plots</a>
+      <a href="/events">Events</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/join">Join</a>
+    </nav>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>

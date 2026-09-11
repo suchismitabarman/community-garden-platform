@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Serpentine Lane Community Garden</title>
+<meta name="description" content="Reserve a garden plot, join a workday, and grow something with your neighbors at Serpentine Lane." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="/">Serpentine&nbsp;Lane</a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/plots">Plots</a>
+      <a href="/events">Events</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="hero-kicker">A community garden on Serpentine Lane</p>
+      <h1>Twenty-four beds.<br>One long season.<br>Your name on a plot.</h1>
+      <p class="hero-lede">
+        We split the lot into plots of three sizes, tend them March through October,
+        and share what comes up. Pick an open bed on the map and it's yours for the season.
+      </p>
+      <div class="hero-actions">
+        <a href="/plots" class="btn btn-primary">Find an open plot</a>
+        <a href="/events" class="btn btn-ghost">See what's on</a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt id="stat-available">–</dt><dd>plots open</dd></div>
+        <div><dt id="stat-reserved">–</dt><dd>plots claimed</dd></div>
+        <div><dt>3</dt><dd>bed sizes</dd></div>
+      </dl>
+    </div>
+    <div class="hero-map-peek" aria-hidden="true">
+      <div id="hero-peek-grid" class="peek-grid"></div>
+      <p class="peek-caption">live plot map on the Plots page</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how wrap">
+    <article>
+      <h3>Choose a bed</h3>
+      <p>Small, medium, or large — sized in feet, priced for a season, not a summer.</p>
+    </article>
+    <article>
+      <h3>Put your name on it</h3>
+      <p>Reserving takes a minute. Your name goes up on the map right away.</p>
+    </article>
+    <article>
+      <h3>Show up when you can</h3>
+      <p>Workdays are posted on the events board. Nothing is mandatory but the watering.</p>
+    </article>
+  </section>
+
+  <!-- HUB: where to go next -->
+  <section class="hub wrap">
+    <div class="section-head">
+      <h2>Get into it</h2>
+      <p>Four things you can do here. Pick whichever one fits tonight.</p>
+    </div>
+    <ul class="hub-list">
+      <li class="hub-row">
+        <a href="/plots">
+          <span class="hub-title">The plot map</span>
+          <span class="hub-desc">See all 24 beds, sizes and prices, and claim an open one.</span>
+        </a>
+      </li>
+      <li class="hub-row">
+        <a href="/events">
+          <span class="hub-title">On the calendar</span>
+          <span class="hub-desc">Workdays, a seed swap, and a slow morning for younger gardeners.</span>
+        </a>
+      </li>
+      <li class="hub-row">
+        <a href="/volunteer">
+          <span class="hub-title">Help without a plot</span>
+          <span class="hub-desc">Compost, tools, watering rounds — for people not ready to commit to a bed.</span>
+        </a>
+      </li>
+      <li class="hub-row">
+        <a href="/join">
+          <span class="hub-title">Hear about openings</span>
+          <span class="hub-desc">One email when a plot frees up or a workday gets posted.</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <p>Serpentine Lane Community Garden — grown, not built, by the people who tend it.</p>
+      <p class="footer-sub">Open dawn to dusk. Gate code posted on the shed.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/plots">Plots</a>
+      <a href="/events">Events</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/join">Join</a>
+    </nav>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
